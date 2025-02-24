@@ -3,6 +3,10 @@ import { Task } from '../types';
 
 const MOCK_API_DELAY = 1000;
 
+/**
+ * Fetches tasks from the API.
+ * @returns {Promise<Task[]>} - A promise that resolves to the fetched tasks.
+ */
 export const fetchTasksFromAPI = (): Promise<Task[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -16,6 +20,11 @@ export const fetchTasksFromAPI = (): Promise<Task[]> => {
   });
 };
 
+/**
+ * Updates tasks on the API.
+ * @param {Task[]} tasks - The tasks to be updated.
+ * @returns {void}
+ */
 export const updateTasksOnAPI = (tasks: Task[]): void => {
   setTimeout(() => {
     console.log('Tasks updated on server:', tasks);

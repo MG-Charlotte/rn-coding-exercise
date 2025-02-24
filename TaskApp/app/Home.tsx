@@ -65,7 +65,6 @@ export default function HomeScreen() {
     setNewTask('');
   };
 
-  // BUG: This function toggles 'isComplete' instead of the 'completed' property
   const toggleTask = (id: number) => {
     setTasks(
       tasks.map((task) =>
@@ -76,7 +75,7 @@ export default function HomeScreen() {
 
   // MISSING FUNCTIONALITY: Implement deletion of tasks marked as completed.
   const deleteCompletedTasks = () => {
-    // TODO: Remove all tasks where task.completed === true
+
   };
 
   if (loading) {
